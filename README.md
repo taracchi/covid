@@ -1,4 +1,4 @@
-# covid
+# Covid
 
 This repository contains a set of Jupyter notebooks for the analysis of data concerning the **COVID-19** contagion in Italy.
 
