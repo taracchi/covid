@@ -5,3 +5,6 @@ Untitled.ipynb
 .ipynb_checkpoints/BFM_Covid-checkpoint.ipynb
 .ipynb_checkpoints/proiezione_nuovi_contagi_FCF-checkpoint.ipynb
 .ipynb_checkpoints/plotly_analisi_infetti-checkpoint.ipynb
+.ipynb_checkpoints/covid_data_reader-checkpoint.ipynb
+*.pkl
+*.pkl
