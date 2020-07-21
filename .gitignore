@@ -8,3 +8,4 @@ Untitled.ipynb
 .ipynb_checkpoints/covid_data_reader-checkpoint.ipynb
 *.pkl
 *.pkl
+international/owid-covid-data.xlsx
