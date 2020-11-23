@@ -11,8 +11,8 @@ import numpy as np
 import pickle as pkl
 from datetime import datetime, timedelta
 
-import matplotlib.pyplot as plt
-import matplotlib.colors as mcolors
+
+#import matplotlib.colors as mcolors
 
 from aidam.miscellanea_utils import find_matlabstyle
 from aidam.math_utils import moving_function_rev1
@@ -106,7 +106,7 @@ search_space_2waves=np.array([[10,2,1000,180,2,8000],
               [100, num_giorni/2,10000,num_giorni, num_giorni/2,20000]])
 
 search_space_3waves=np.array([[10 , 10,           1000,  100,        10,           1000,  150,        5,           5000],
-                              [100, num_giorni/2,10000, num_giorni, num_giorni/2,20000, num_giorni, num_giorni/2,50000]])
+                              [100, num_giorni/2,10000, num_giorni, num_giorni/2,20000, num_giorni, num_giorni/2,20000]])
 
 search_space_3waves_samestd=np.array([[0 , 10,           1000,  10,        5,           0,  150,        5000],
                               [90, num_giorni/2,10000, num_giorni, num_giorni/2,10000, num_giorni,20000]])
@@ -153,9 +153,7 @@ def daily_infected_fitness(candidates):
     evals=np.zeros(candidates.shape[0])
     for i,c in enumerate(candidates):        
         pred_infetti=generate_global_distribution(c.reshape(-1,3),num_giorni)
-        # globale
-        #err=np.mean(np.abs(target_data-pred_infetti))
-        err=np.mean(np.abs(target_data-pred_infetti))+np.std(np.abs(target_data-pred_infetti))
+        err=np.mean(np.abs(target_data-pred_infetti))
         evals[i]=-err
     return evals
 
