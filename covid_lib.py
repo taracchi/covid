@@ -10,6 +10,7 @@ i dati necessari alle analisi
 
 
 import pickle as pkl
+from aidam.miscellanea_utils import find_matlabstyle
 
 
 def read_covid_data(data_file,verbose=True):
@@ -26,6 +27,12 @@ def read_covid_data(data_file,verbose=True):
         print('Primo giorno: %s'%giorni[0])
         print('Ultimo giorno: %s'%giorni[-1])
     return trend,regioni,giorni,giorno_settimana,popolazione,day_counter
+
+
+
+def find_day_index(days_array,day_string):
+    gi=find_matlabstyle(days_array, lambda x: x[0:len(day_string)]==day_string)
+    return gi
 
 
 
